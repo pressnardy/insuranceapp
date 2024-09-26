@@ -19,9 +19,9 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # path('eccentric/clients/', include('clients.urls')),
-    path('clients/', include('clients.urls')),
-    # path('eccentric/', include('eccentric.urls')),
+    path('eccentric/clients/', include('clients.urls')),
+    # path('clients/', include('clients.urls')),
+    path('eccentric/', include('eccentric.urls')),
     # path('accounts/', include('django.contrib.auth.urls')),
 ]
 
