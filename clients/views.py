@@ -7,7 +7,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 
   
-@login_required
+# @login_required
 def index(request):
 	clients = Client.objects.all().order_by("renewal_date")
 	print(clients)
@@ -17,7 +17,7 @@ def index(request):
 	})
 
 
-@login_required
+# @login_required
 def register(request):
 	if request.method == "POST":
 		form = ClientForm(request.POST)
@@ -39,7 +39,7 @@ def register(request):
 		})
 
 
-@login_required
+# @login_required
 def search_view(request):
 	form = SearchForm(request.GET or None)
 	results = []
@@ -66,13 +66,13 @@ def search(request, category, query):
 	return results
 
 
-@login_required
+# @login_required
 def client_details(request, client_id):
 	client = Client.objects.filter(id=client_id, created_by=request.user) if client_id else None
 	return render(request, 'clients/client_details.html', {'client': client})
 
 
-@login_required
+# @login_required
 def edit_client(request, client_id):
 	client = get_object_or_404(Client, id=client_id, created_by=request.user)
 	if request.method == 'POST':
@@ -89,7 +89,7 @@ def edit_client(request, client_id):
 	})
 
 
-@login_required
+# @login_required
 def delete_client(request, pk):
 	client = get_object_or_404(Client, pk=pk, created_by=request.user)
 	if request.method == 'POST':
