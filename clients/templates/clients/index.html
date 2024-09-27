@@ -84,9 +84,13 @@
 	<button class="clients">
 		Clients
 	</button>
-	<button class="open-search-box">
-		Search
-	</button>
+	<form action="{% url 'clients:search' %}" method="POST">
+		{% csrf_token %}
+		<button type="submit">
+			Search
+		</button>
+	</form>
+	
 	<button class="reminder">
 		Reminders
 	</button>

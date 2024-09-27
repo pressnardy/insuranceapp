@@ -11,9 +11,20 @@ nav {
     font-size: 16px;
 }
 
-.title {
-    font-size: 24px;
+
+.heading {
+    font-size: 40px;
+    text-align: center;
+    
 }
+
+
+.title, button.home {
+    font-size: 24px;
+    border: none;
+    background: none;
+}
+
 
 nav > .buttons{
     display: flex;
@@ -55,15 +66,17 @@ button.form-submit {
 }
 
 
-/*footer {*/
-/*    background: black;*/
-/*    height: 50px;*/
-/*    position: absolute;*/
-/*    left: 0;*/
-/*    bottom: 0;*/
-/*    width: 100%;*/
-/*    background: black;*/
-/*    padding: 16px;*/
-/*    color: white;*/
-/*    justify-self: flex-end;*/
-/*}*/
+footer {
+   background: black;
+   height: 50px;
+   position: absolute;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background: black;
+   padding: 16px;
+   color: white;
+   justify-self: flex-end;
+}
+
+
