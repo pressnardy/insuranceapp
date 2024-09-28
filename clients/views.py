@@ -95,7 +95,7 @@ def delete_client(request, pk):
 	if request.method == 'POST':
 		client.delete()
 		messages.success(request, "The client was deleted successfully.")
-		return redirect('clients')
+		return redirect('clients:index')
 	return render(request, 'clients/edit.html', {'client': client})
 
 
