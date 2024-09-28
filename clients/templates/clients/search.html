@@ -29,24 +29,39 @@
 <section id="clients">
 	<div class="clients-wrapper">
 		<div class="title">
-			Clients
+			Clients Found
 		</div>
 		<br>
 		<div class="all-clients">
-		{% for client in results %}
-			<div class="client-details">
-				<div class="client-detail">{{ client.name }}</div>
-				<div class="client-detail">{{ client.registration_number }}</div>
-				<div class="client-detail">{{ client.policy_number }}</div>
-				<div class="client-detail">{{ client.start_date }}</div>
-				<div class="client-detail">{{ client.end_date }}</div>
-				<div class="client-detail">{{ client.amount }}</div>
-			</div>
-			<br>
-		{% endfor %}
+			{% for client in results %}
+				<form action="{% url 'clients:edit_client' client.id %}" method="get">
+					{% csrf_token %}
+				<div class="client-details">
+					<div class="client-detail client-name">
+						<div class="label">Name</div>
+						<div class="element">{{ client.name }}</div>
+					</div>
+					<div class="client-detail date">
+						<div class="label">Renewal Date</div>
+						<div class="element clients-renewal-date">{{ client.renewal_date }}</div>
+					</div>
+
+					<div class="client-detail amount">
+						<div class="label">Amount</div>
+						<div class="element">{{ client.amount }}</div>
+					</div>
+				</div>
+					<div class="client-detail edit-button">
+						<button id="edit">View/Edit</button>
+					</div>
+			</form>
+			{% endfor %}
 		</div>
 	</div>
 </section>
+<form class="add-client" action="{% url 'clients:register' %}">
+	<button id="add-client">+</button>
+</form>
 </body>
 </html>
 

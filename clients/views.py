@@ -26,7 +26,7 @@ def register(request):
 			client = form.save(commit=False)
 			client.created_by = request.user
 			client.save()
-			return HttpResponseRedirect(reverse('clients:index'))
+			return HttpResponseRedirect(reverse('clients:register'))
 		else:
 			print(form.cleaned_data, request.user)
 			return render(request, "clients/register.html", {
@@ -80,7 +80,7 @@ def edit_client(request, client_id):
 		if form.is_valid():
 			print('is valid')
 			form.save()
-			return redirect('client_details', client_id=client.id)
+			return redirect('clients:index')
 	else:
 		form = ClientForm(instance=client)
 	return render(request, 'clients/edit.html',
