@@ -29,7 +29,7 @@
 <section id="clients">
 	<div class="clients-wrapper">
 		<div class="title">
-			Clients Found
+			Clients Details
 		</div>
 		<br>
 		<div class="all-clients">
@@ -56,9 +56,13 @@
 					</div>
 			</form>
 			{% endfor %}
+			{% if message %}
+				<h1 style="color: red;">{{ message}}</h1>
+			{% endif %}
 		</div>
 	</div>
 </section>
+
 <form class="add-client" action="{% url 'clients:register' %}">
 	<button id="add-client">+</button>
 </form>

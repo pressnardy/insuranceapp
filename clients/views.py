@@ -43,12 +43,17 @@ def register(request):
 def search_view(request):
 	form = SearchForm(request.GET or None)
 	results = []
+	message = 'clients found'
 	if request.method == 'GET' and form.is_valid():
 		category = form.cleaned_data['category']
 		query = form.cleaned_data['query']
 		results = search(request, category, query)
-
-	return render(request, 'clients/search.html', {'form': form, 'results': results})
+		print(len(results))
+	if len(results) == 0:
+		message = 'client not found: review search query and try again'
+	return render(request, 'clients/search.html', 
+			   {'form': form, 'results': results, 'message': message}
+			   )
 
 
 
