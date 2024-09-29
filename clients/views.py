@@ -104,4 +104,3 @@ def delete_client(request, pk):
 	return render(request, 'clients/edit.html', {'client': client})
 
 
-
