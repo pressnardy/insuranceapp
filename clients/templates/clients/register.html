@@ -1,11 +1,23 @@
 
-{% extends 'clients\loggedin.html' %}
+{% extends 'clients\index.html' %}
+
+{% load static %}
+
+{% block extra_css %}
+	<link rel="stylesheet" href="{% static 'clients/register.css' %}">
+{% endblock %}
+
+{% block title %}Add Clients{% endblock %}
+
 {% block body %}
+<br>
+<br>
 <section id="client">
 	<div class="client-wrapper">
 		<div class="title">
 			Client Details
 		</div>
+		<br>
 		<div class="form-container">
 			<form id="registration-form" action="{% url 'clients:register' %}" method="POST">
 				{% csrf_token %}
@@ -47,13 +59,14 @@
 				</div>
 				<div class="form-element"  id="add-wrapper">
 					<label>
-						<input class="submit" type="submit" value="Add">
+						<input id="add" class="submit" type="submit" value="Add">
 					</label>
 				</div>
 			</form>
+			<br>
 			<form action="{% url 'clients:index' %}">
 				<label>
-					<input class="submit" type="submit" value="Done">
+					<input id="done" class="submit" type="submit" value="Done">
 				</label>
 			</form>
 			<div class="message">

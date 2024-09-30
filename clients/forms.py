@@ -52,7 +52,7 @@ class SearchForm(forms.Form):
 		('registration_number', 'Registration Number'),
 	]
 	category = forms.ChoiceField(choices=CATEGORY_CHOICES, required=True)
-	query = forms.CharField(max_length=50, required=True,
+	query = forms.CharField(max_length=50, required=True, min_length=1,
 		widget=forms.TextInput(attrs={
 			'class': 'query', 'id': 'query', 'placeholder': 'query'
 		}))

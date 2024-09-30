@@ -53,7 +53,7 @@
 			</button>
 		</form>
 
-		<form action="{% url 'clients:search' %}" method="POST">
+		<form action="{% url 'clients:search' %}" method="GET">
 			{% csrf_token %}
 			<button type="submit" class="search">
 				<img id="search-client" src="{% static 'eccentric/svg/search.svg' %}">

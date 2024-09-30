@@ -58,7 +58,15 @@ function highlightRenewalDates() {
 highlightRenewalDates()
 
 
-document.querySelector('.open-search-box').addEventListener('click', function() {
-    document.getElementById('section-search').style.display = 'flex';
+// disply all clients details
+document.querySelectorAll('.more').forEach((moreButton, index) => {
+    moreButton.addEventListener('click', function() {
+        const details = document.querySelectorAll('.all-details')[index];
+        if (details.style.display === 'flex') {
+            details.style.display = 'none';
+        } else {
+            details.style.display = 'flex';
+        }
+    });
 });
 

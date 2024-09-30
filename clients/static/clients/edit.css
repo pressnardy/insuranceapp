@@ -1,0 +1,38 @@
+
+:root {
+    --mobile-medium: 32px;
+    --mobile-small: 24px;
+    --accent-color: #25D366;
+    --light-gray: #a9a9a9;
+}
+
+form#edit_form {
+    align-items: flex-start;
+    padding: 32px;
+    border: 1px solid var(--light-gray);
+}
+
+label {
+    font-size: var(--mobile-medium);
+}
+
+input.input-text {
+    font-size: var(--mobile-medium);
+    border-bottom: 1px solid var(--light-gray);
+    font-weight: 600;
+    width: 450px;
+}
+
+input.input-date {
+    font-size: var(--mobile-small);
+}
+
+#save-wrapper {
+    align-self: center;
+}
+
+input#save.submit {
+    background: var(--accent-color);
+    font-size: var(--mobile-medium);
+}
+

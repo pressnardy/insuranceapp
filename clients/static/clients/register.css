@@ -1,0 +1,60 @@
+
+:root {
+    --purple: #56013b;
+    --dark-blue: #1bbbef;
+    --light-blue: #0680a8;
+    --background-baige: rgb(226, 238, 237);
+    --thin: 100;
+    --accent-color: #25D366;
+    --light-gray: #a9a9a9;
+
+
+    --mobile-medium: 32px;
+    --mobile-small: 24px;
+}
+
+
+form#registration-form {
+    align-items: flex-start;
+    gap: 16px;
+    border: 1px solid var(--light-gray);
+    padding: 32px;
+    box-sizing: content-box;
+}
+
+
+label {
+    font-size: var(--mobile-medium);
+}
+
+
+input.input-text {
+    font-size: var(--mobile-medium);
+    border-bottom: 1px solid var(--light-gray);
+    font-weight: 600;
+    width: 500px;
+}
+
+
+input.input-date {
+    font-size: var(--mobile-small);
+}
+
+
+#add-wrapper {
+    align-self: center;
+}
+
+
+input#add.submit {
+    background: var(--accent-color);
+    font-size: var(--mobile-medium);
+}
+
+input#done {
+    background: none;
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
+    font-size: var(--mobile-medium);
+    font-weight: 600;
+}

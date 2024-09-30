@@ -1,7 +1,18 @@
-{% extends 'clients/loggedin.html' %}
+{% extends 'clients/index.html' %}
+
+{% load static %}
+
+{% block extra_css %}
+	<link rel="stylesheet" href="{% static 'clients/edit.css' %}">
+{% endblock %}
+
+{% block title %}Edit Client{% endblock %}
+
 {% block body %}
+
 <section id="edit-wrapper">
 <h1 class="title">Edit Client</h1>
+<br>
 <form id="edit_form" method="POST" action="{% url 'clients:edit_client' client.id %}">
 	{% csrf_token %}
 	<div class="form-element">
@@ -40,9 +51,9 @@
 			{{ form.amount }}
 		</label>
 	</div>
-	<div class="form-element"  id="add-wrapper">
+	<div id="save-wrapper">
 		<label>
-			<input class="submit" type="submit" value="Save">
+			<input id="save" class="submit" type="submit" value="Save">
 		</label>
 	</div>
 

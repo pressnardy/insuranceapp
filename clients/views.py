@@ -43,19 +43,26 @@ def register(request):
 def search_view(request):
 	form = SearchForm(request.GET or None)
 	results = []
-	message = 'clients found'
+	message = [' ']
 	if request.method == 'GET' and form.is_valid():
-		category = form.cleaned_data['category']
-		query = form.cleaned_data['query']
-		results = search(request, category, query)
-		print(len(results))
+			category = form.cleaned_data['category']
+			query = form.cleaned_data['query']
+			results = search(request, category, query)
+			print(len(results))
+	else:
+		try:
+			query_lenth = len(form.cleaned_data['query'])
+		except (AttributeError, KeyError):
+			return render(request, 'clients/search.html',
+				{'form': form, 'results': results,}
+			)
 	if len(results) == 0:
-		message = 'client not found: review search query and try again'
+		message[0] = 'client not found: review search query and try again'
+
+	print(results)
 	return render(request, 'clients/search.html', 
-			   {'form': form, 'results': results, 'message': message}
+			   {'form': form, 'results': results, 'message': message[0],}
 			   )
-
-
 
 def search(request, category, query):
 	search_filters = {
@@ -66,7 +73,7 @@ def search(request, category, query):
 	}
 
 	filter_kwargs = search_filters.get(category, {})
-	results = Client.objects.filter(**filter_kwargs) if filter_kwargs else []
+	results = Client.objects.filter(**filter_kwargs) if filter_kwargs else message
 
 	return results
 
