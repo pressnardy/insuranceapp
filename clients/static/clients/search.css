@@ -12,9 +12,10 @@
 
 }
 
-.sf-element {
+.sf-element.seach-by {
     border-radius: 8px;
     display: flex;
+    gap: 16px;
 
 }
 

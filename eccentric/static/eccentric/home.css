@@ -19,11 +19,131 @@ html, body {
     --light-gray: #ababab;
 }
 
+@media screen and (max-width: 600px) {
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        font-size: 16px;
+        padding: 16px;
+        border-bottom: 1px solid var(--light-gray);
+        position: sticky;
+        top: 0;
+    }
+
+    button.home.title {
+        font-weight: 800;
+        font-size: 70px;
+        color: var(--accent-color);
+    }
+
+    button.register {
+        font-size: 40px;
+        background: none;
+        font-weight: bold;
+        border: none;
+
+    }
+
+    button.login {
+        font-size: 40px;
+        font-weight: bold;
+        background: none;
+        border: none;
+    }
+
+
+    .heading {
+        font-size: 40px;
+        text-align: center;
+
+    }
+
+
+    .title{
+        font-size: 24px;
+        border: none;
+        background: none;
+    }
+
+
+    nav > .buttons{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 32px;
+        padding: 0 16px;
+
+    }
+
+    button {
+        font-size: 16px;
+    }
+
+    section#logging, section#home {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    label {
+        gap: 16px;
+        font-size: 24px;
+    }
+
+    input.input-text {
+        font-size: 24px;
+        min-width: 400px;
+        padding: 2px 4px;
+    }
+    input.form-control, input {
+        font-size: 24px;
+        min-width: 400px;
+        padding: 2px 4px;
+    }
+
+    button.form-submit {
+        font-size: 24px;
+        padding: 4px 8px;
+    }
+
+    #send-message {
+        background: none;
+        position: absolute;
+        left: 80vw;
+        bottom: 10vh;
+        border: none;
+        margin-right: 16px;
+    }
+
+    footer {
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        left: 0vw;
+        bottom: 0vh;
+        width: 100%;
+        padding: 8px 56px;
+        color: white;
+        justify-self: flex-end;
+        border-top: 1px solid var(--light-gray);
+    }
+
+
+    button.clients, button.search, button.notify {
+        font-size: 40px;
+        border: none;
+        background: none;
+    }
+}
+
+/*bgger screens*/
+
 nav {
     display: flex;
     justify-content: space-between;
-    font-size: 16px;
-    padding: 16px;
+    padding: 0 32px;
     border-bottom: 1px solid var(--light-gray);
     position: sticky;
     top: 0;
@@ -31,12 +151,13 @@ nav {
 
 button.home.title {
     font-weight: 800;
-    font-size: 70px;
+    font-size: 32px;
     color: var(--accent-color);
 }
 
+
 button.register {
-    font-size: 40px;
+    font-size: 24px;
     background: none;
     font-weight: bold;
     border: none;
@@ -44,7 +165,7 @@ button.register {
 }
 
 button.login {
-    font-size: 40px;
+    font-size: 24px;
     font-weight: bold;
     background: none;
     border: none;
@@ -54,7 +175,7 @@ button.login {
 .heading {
     font-size: 40px;
     text-align: center;
-    
+
 }
 
 
@@ -112,7 +233,12 @@ button.form-submit {
     left: 80vw;
     bottom: 10vh;
     border: none;
-    margin-right: 16px;
+    margin: 16px;
+
+}
+
+img#whatsapp {
+    width: 80px;
 }
 
 footer {
@@ -129,8 +255,14 @@ footer {
 }
 
 
-button.clients, button.search, button.notify {
-    font-size: 40px;
+#search-client, #clients-group, #notify {
+    /*height: 40px;*/
+    width: 40px;
+    border: none;
+    background: none;
+}
+
+button.notify, button.search, button.clients {
     border: none;
     background: none;
 }

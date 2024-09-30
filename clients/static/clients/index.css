@@ -24,7 +24,7 @@ nav {
     background: #ffffff;
     display: flex;
     justify-content: space-between;
-    padding: 8px 32px;
+    padding: 0 32px;
     align-items: center;
     border-bottom: 1px solid var(--light-gray);
     position: fixed;
@@ -32,19 +32,19 @@ nav {
     top: 0;
     width: 100%;
     z-index: 1;
-    margin-bottom: 16px;
+
 }
 
 button.home.title {
     font-weight: 800;
-    font-size: 70px;
+    font-size: 32px;
     color: var(--accent-color);
     border: none;
     background: none;
 }
 
 .logout {
-    font-size: 32px;
+    font-size: 24px;
     color: black;
     font-weight: 700;
 }
@@ -121,11 +121,11 @@ form#registration-form {
 
 
 button#edit {
-    font-size: 32px;
+    font-size: 24px;
     text-align: center;
     border: none;
     background: none;
-    padding: 20px 4px;
+    padding: 4px 16px;
 
 }
 
@@ -151,9 +151,8 @@ button#edit {
 
 
 .title {
-    font-size: 48px;
+    font-size: 24px;
     color: black;
-    font-weight: bold;
     font-weight: var(--thin);
     padding-top: 16px;
     padding-left: 4px;
@@ -169,12 +168,19 @@ button#edit {
 }
 
 /*clients list section*/
+ .column-title {
+     display: flex;
+     justify-content: space-between;
+     width: 100%;
+     min-width: 550px;
+     padding-right: 16px;
+ }
 
 .all-clients > form {
     display: flex;
     gap: 16px;
     flex-direction: column;
-    min-width: 700px;
+    min-width: 500px;
     padding-bottom: 16px;
     border-bottom: 1px solid var(--light-gray);
 }
@@ -200,8 +206,8 @@ button#edit {
 }
 
 img.triangle-svg {
-    height: 40px;
-    width: 40px;
+    height: 20px;
+    width: 20px;
 }
 
 .edit-button {
@@ -216,7 +222,7 @@ img.triangle-svg {
 
 
 .label {
-    font-size: 24px;
+    font-size: 16px;
 }
 
 
@@ -236,40 +242,51 @@ img.triangle-svg {
     min-width: 120px;
     white-space: nowrap;
 }
+
 .client-name {
-    font-size: 40px;
+    font-size: 32px;
     font-weight: bold;
 }
 
 .renewal-date {
-    font-size: 32px;
+    font-size: 24px;
 }
 
 .all-details {
     display: flex;
     flex-direction: column;
-    min-width: 600px;
+    width: 100%;
+    min-width: 500px;
 }
 
 .client-detail {
     padding: 4px 8px;
     border-radius: 8px;
-    font-size: 32px;
+    font-size: 24px;
 }
 
 .client-detail > span {
     font-weight: 600;
 }
+
 .edit-button {
-    font-size: 40px;
+    font-size: 24px;
     padding: 4px 16px;
     width: 100px;
     align-self: flex-end;
     border-radius: 8px;
-    border: 1px solid var(--accent-color);
-    color: var(--accent-color);
+    border: 1px solid var(--light-gray);
+    /*color: var(--light-gray);*/
+    margin-bottom: 16px;
 
 }
+
+.edit-button:hover {
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color)
+
+}
+
 
 .amount-wrapper {
     display: flex;
@@ -337,11 +354,11 @@ input#query {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 100px;
+    font-size: 60px;
     color: white;
     background: var(--accent-color);
-    width: 100px;
-    height: 100px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     padding-bottom: 20px;
     position: fixed;
@@ -356,11 +373,10 @@ footer {
     display: flex;
     justify-content: space-between;
     position: fixed;
-    left: 0vw;
-    bottom: 0vh;
+    left: 0;
+    bottom: 0;
     width: 100%;
     padding: 8px 56px;
-    color: white;
     justify-self: flex-end;
     border-top: 1px solid var(--light-gray);
     z-index: 1;
@@ -369,11 +385,16 @@ footer {
 
 
 button.clients, button.search, button.notify {
-    font-size: 40px;
     border: none;
     background: none;
 }
 
+#search-client, #clients-group, #notify {
+
+    width: 40px;
+    border: none;
+    background: none;
+}
 
 /*edit html*/
 section#edit-wrapper {

@@ -13,48 +13,50 @@
     --mobile-small: 24px;
 }
 
+@media screen and (max-width: 600px) {
 
-form#registration-form {
-    align-items: flex-start;
-    gap: 16px;
-    border: 1px solid var(--light-gray);
-    padding: 32px;
-    box-sizing: content-box;
-}
-
-
-label {
-    font-size: var(--mobile-medium);
-}
+    form#registration-form {
+        align-items: flex-start;
+        gap: 16px;
+        border: 1px solid var(--light-gray);
+        padding: 32px;
+        box-sizing: content-box;
+    }
 
 
-input.input-text {
-    font-size: var(--mobile-medium);
-    border-bottom: 1px solid var(--light-gray);
-    font-weight: 600;
-    width: 500px;
-}
+    label {
+        font-size: var(--mobile-medium);
+    }
 
 
-input.input-date {
-    font-size: var(--mobile-small);
-}
+    input.input-text {
+        font-size: var(--mobile-medium);
+        border-bottom: 1px solid var(--light-gray);
+        font-weight: 600;
+        width: 500px;
+    }
 
 
-#add-wrapper {
-    align-self: center;
-}
+    input.input-date {
+        font-size: var(--mobile-small);
+    }
 
 
-input#add.submit {
-    background: var(--accent-color);
-    font-size: var(--mobile-medium);
-}
+    #add-wrapper {
+        align-self: center;
+    }
 
-input#done {
-    background: none;
-    border: 1px solid var(--accent-color);
-    color: var(--accent-color);
-    font-size: var(--mobile-medium);
-    font-weight: 600;
+
+    input#add.submit {
+        background: var(--accent-color);
+        font-size: var(--mobile-medium);
+    }
+
+    input#done {
+        background: none;
+        border: 1px solid var(--accent-color);
+        color: var(--accent-color);
+        font-size: var(--mobile-medium);
+        font-weight: 600;
+    }
 }
