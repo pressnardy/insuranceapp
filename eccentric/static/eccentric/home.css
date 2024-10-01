@@ -1,144 +1,21 @@
-html, body {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-}
+
 
 html, body {
+    position: fixed;
     display: flex;
     flex-direction: column;
-    height: 100%;
-    width: 100%;
+    min-width: fit-content;
     min-height: fit-content;
-
+    width: 100%;
+    height: 100%;
 }
+
 
 :root {
     --accent-color: #25D366;
     --light-gray: #ababab;
 }
 
-@media screen and (max-width: 600px) {
-
-    nav {
-        display: flex;
-        justify-content: space-between;
-        font-size: 16px;
-        padding: 16px;
-        border-bottom: 1px solid var(--light-gray);
-        position: sticky;
-        top: 0;
-    }
-
-    button.home.title {
-        font-weight: 800;
-        font-size: 70px;
-        color: var(--accent-color);
-    }
-
-    button.register {
-        font-size: 40px;
-        background: none;
-        font-weight: bold;
-        border: none;
-
-    }
-
-    button.login {
-        font-size: 40px;
-        font-weight: bold;
-        background: none;
-        border: none;
-    }
-
-
-    .heading {
-        font-size: 40px;
-        text-align: center;
-
-    }
-
-
-    .title{
-        font-size: 24px;
-        border: none;
-        background: none;
-    }
-
-
-    nav > .buttons{
-        display: flex;
-        flex-wrap: nowrap;
-        justify-content: flex-end;
-        align-items: center;
-        gap: 32px;
-        padding: 0 16px;
-
-    }
-
-    button {
-        font-size: 16px;
-    }
-
-    section#logging, section#home {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    label {
-        gap: 16px;
-        font-size: 24px;
-    }
-
-    input.input-text {
-        font-size: 24px;
-        min-width: 400px;
-        padding: 2px 4px;
-    }
-    input.form-control, input {
-        font-size: 24px;
-        min-width: 400px;
-        padding: 2px 4px;
-    }
-
-    button.form-submit {
-        font-size: 24px;
-        padding: 4px 8px;
-    }
-
-    #send-message {
-        background: none;
-        position: absolute;
-        left: 80vw;
-        bottom: 10vh;
-        border: none;
-        margin-right: 16px;
-    }
-
-    footer {
-        display: flex;
-        justify-content: space-between;
-        position: absolute;
-        left: 0vw;
-        bottom: 0vh;
-        width: 100%;
-        padding: 8px 56px;
-        color: white;
-        justify-self: flex-end;
-        border-top: 1px solid var(--light-gray);
-    }
-
-
-    button.clients, button.search, button.notify {
-        font-size: 40px;
-        border: none;
-        background: none;
-    }
-}
-
-/*bgger screens*/
 
 nav {
     display: flex;
@@ -149,7 +26,7 @@ nav {
     top: 0;
 }
 
-button.home.title {
+.home {
     font-weight: 800;
     font-size: 32px;
     color: var(--accent-color);
@@ -157,7 +34,7 @@ button.home.title {
 
 
 button.register {
-    font-size: 24px;
+    font-size: 16px;
     background: none;
     font-weight: bold;
     border: none;
@@ -165,7 +42,7 @@ button.register {
 }
 
 button.login {
-    font-size: 24px;
+    font-size: 16px;
     font-weight: bold;
     background: none;
     border: none;
@@ -173,7 +50,7 @@ button.login {
 
 
 .heading {
-    font-size: 40px;
+    font-size: 24px;
     text-align: center;
 
 }
@@ -191,7 +68,7 @@ nav > .buttons{
     flex-wrap: nowrap;
     justify-content: flex-end;
     align-items: center;
-    gap: 32px;
+    gap: 16px;
     padding: 0 16px;
 
 }
@@ -267,3 +144,139 @@ button.notify, button.search, button.clients {
     background: none;
 }
 
+
+@media screen and (max-width: 600px) {
+
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        font-size: 16px;
+        border-bottom: 1px solid var(--light-gray);
+        position: fixed;
+        top: 0;
+        width: 100%;
+        padding: 0 16px;
+    }
+
+    button.home.title {
+        font-weight: 800;
+        font-size: 32px;
+        color: var(--accent-color);
+    }
+
+    button.register {
+        font-size: 16px;
+        background: none;
+        font-weight: bold;
+        border: none;
+
+    }
+
+    button.login {
+        font-size: 16px;
+        font-weight: bold;
+        background: none;
+        border: none;
+    }
+
+
+    .heading {
+        font-size: 24px;
+        text-align: center;
+
+    }
+
+
+    .title{
+        font-size: 24px;
+        border: none;
+        background: none;
+    }
+
+
+    nav > .buttons{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 32px;
+        padding: 0 16px;
+
+    }
+
+    button {
+        font-size: 16px;
+    }
+
+    section#logging {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    section#home {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+
+
+    label {
+        gap: 16px;
+        font-size: 24px;
+    }
+
+    input.input-text {
+        font-size: 24px;
+        min-width: 400px;
+        padding: 2px 4px;
+    }
+    input.form-control, input {
+        font-size: 24px;
+        min-width: 400px;
+        padding: 2px 4px;
+    }
+
+    button.form-submit {
+        font-size: 24px;
+        padding: 4px 8px;
+    }
+
+    #send-message {
+        background: none;
+        position: fixed;
+        left: 70vw;
+        bottom: 10vh;
+        border: none;
+        margin-right: 8vw;
+    }
+
+    footer {
+        display: flex;
+        justify-content: space-between;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        padding: 8px;
+        color: white;
+        border-top: 1px solid var(--light-gray);
+    }
+
+
+    button.clients, button.search, button.notify {
+        border: none;
+        background: none;
+    }
+
+    #search-client, #clients-group, #notify {
+        /*height: 40px;*/
+        width: 35px;
+        border: none;
+        background: none;
+    }
+}
+
+/*bgger screens*/

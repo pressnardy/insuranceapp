@@ -9,11 +9,13 @@
 {% block title %}Search{% endblock %}
 
 {% block body %}
+<br>
+<br>
+<br>
 <section id="section-search">
-	<br>
 	<div class="search-wrapper">
 		<form id="search-form" action="{% url 'clients:search' %}">
-			<div class="seach-by sf-element">
+			<div class="search-by sf-element">
 				<div class="category">{{ form.category }}</div>
 				<div id="query">{{ form.query }}</div>
 			</div>
@@ -23,13 +25,12 @@
 		</form>
 	</div>
 </section>
-
+<br>
 <section id="clients">
 	<div class="clients-wrapper">
 		<div class="title">
 			Clients Details
 		</div>
-		<br>
 		<div class="all-clients">
 			{% for client in results %}
 				<form class="client" action="{% url 'clients:edit_client' client.id %}" method="get">

@@ -2,11 +2,13 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	{% load static %}
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-	<link rel="stylesheet" href="{% static 'clients/mediaindex.css' %}">
+
 	<link rel="stylesheet" href="{% static 'clients/index.css' %}">
+	<link rel="stylesheet" href="{% static 'clients/mediaindex.css' %}">
 	{% block extra_css %}{% endblock %}
 	<script defer src="{% static 'clients/index.js' %}"></script>
 	<title>{% block title %} Clients {% endblock %}</title>
@@ -14,7 +16,7 @@
 <body>
 <nav>
 	<div>
-		<form action="{% url 'eccentric:home' %}">
+		<form id="home" action="{% url 'eccentric:home' %}">
 			{% csrf_token %}
 			<button class="title home" type="submit">Sinsio</button>
 		</form>
@@ -24,15 +26,15 @@
 		<input class="logout" type="submit" value="Logout">
 	</form>
 </nav>
-<br>
 {% block body %}
-
+<br>
+<br>
+<br>
 <section id="clients">
 	<div class="clients-wrapper">
 		<div class="column-title">
 			<div class="title">ClIENT NAME</div>
 			<div class="title">RENEWAL DATE</div>
-
 		</div>
 		<div class="all-clients">
 			{% for client in clients %}
@@ -68,17 +70,14 @@
 					</label>
 					<button type="submit" class="edit-button">Edit</button>
 				</div>
-
 			</form>
-			<br>
 			{% endfor %}
 		</div>
 	</div>
-
 </section>
 {% endblock %}
 <form class="add-client" action="{% url 'clients:register' %}">
-	<button id="add-client">+</button>
+	<button id="add-client"><span>+</span></button>
 </form>
 <footer>
 		<form action="{% url 'clients:index' %}" method="POST">

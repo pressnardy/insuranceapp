@@ -12,10 +12,8 @@
 html, body {
     display: flex;
     flex-direction: column;
-    /*height: 100%;*/
     width: 100%;
-    min-height: fit-content;
-    padding: 50px 0;
+    min-height: 100vh;
 
 }
 
@@ -24,7 +22,7 @@ nav {
     background: #ffffff;
     display: flex;
     justify-content: space-between;
-    padding: 0 32px;
+    padding: 0 32px 8px 32px;
     align-items: center;
     border-bottom: 1px solid var(--light-gray);
     position: fixed;
@@ -35,16 +33,24 @@ nav {
 
 }
 
+form#home {
+    display: flex;
+    align-items: flex-start;
+
+}
+
 button.home.title {
     font-weight: 800;
     font-size: 32px;
     color: var(--accent-color);
     border: none;
     background: none;
+    text-align: center;
+
 }
 
 .logout {
-    font-size: 24px;
+    font-size: 16px;
     color: black;
     font-weight: 700;
 }
@@ -67,7 +73,7 @@ button.profile, button#logout {
 
 
 #clients, #section-search {
-    padding: 8px;
+    padding: 16px;
     border-radius: 16px;
     display: flex;
     flex-direction: column;
@@ -103,9 +109,9 @@ form#registration-form {
     display: flex;
     flex-direction: column;
     gap: 8px;
-    border: 1px solid var(--dark-blue);
+    border: 1px solid var(--light-gray);
     border-radius: 16px;
-    padding: 16px;
+    padding: 32px;
 }
 
 
@@ -131,19 +137,20 @@ button#edit {
 
 
 .input-text {
-    font-size: 24px;
+    font-size: 16px;
     width: 340px;
     border: none;
     padding: 8px;
-    border-bottom: 1px solid var(--dark-blue);
+    border-bottom: 1px solid var(--light-gray);
+    font-weight: 600;
 }
 
 
 .input-date {
-    font-size: 18px;
-    width: 245px;
+    font-size: 16px;
+    width: 240px;
     border: none;
-    border-bottom: 1px solid var(--light-gray);
+    /*border-bottom: 1px solid var(--light-gray);*/
     padding: 8px;
     text-align: right;
 
@@ -153,8 +160,7 @@ button#edit {
 .title {
     font-size: 24px;
     color: black;
-    font-weight: var(--thin);
-    padding-top: 16px;
+    /*font-weight: 600;*/
     padding-left: 4px;
     text-align: center;
 
@@ -183,6 +189,7 @@ button#edit {
     min-width: 500px;
     padding-bottom: 16px;
     border-bottom: 1px solid var(--light-gray);
+    margin: 16px 0;
 }
 
 .client-heading {
@@ -244,12 +251,12 @@ img.triangle-svg {
 }
 
 .client-name {
-    font-size: 32px;
+    font-size: 24px;
     font-weight: bold;
 }
 
 .renewal-date {
-    font-size: 24px;
+    font-size: 16px;
 }
 
 .all-details {
@@ -262,21 +269,21 @@ img.triangle-svg {
 .client-detail {
     padding: 4px 8px;
     border-radius: 8px;
-    font-size: 24px;
+    font-size: 20px;
 }
 
 .client-detail > span {
+    /*font-size: 24p;*/
     font-weight: 600;
 }
 
 .edit-button {
-    font-size: 24px;
-    padding: 4px 16px;
+    font-size: 16px;
+    padding: 4px 8px;
     width: 100px;
     align-self: flex-end;
-    border-radius: 8px;
+    border-radius: 16px;
     border: 1px solid var(--light-gray);
-    /*color: var(--light-gray);*/
     margin-bottom: 16px;
 
 }
@@ -294,25 +301,26 @@ img.triangle-svg {
 }
 
 .client-amount {
-    font-size: 32px;
+    font-size: 24px;
 }
 
 
 .submit {
-    font-size: 28px;
-    padding: 8px 16px;
+    font-size: 24px;
+    padding: 4px 16px;
     border-radius: 8px;
     margin: 16px 0;
-    border: 1px solid white;
-    background: var(--light-blue);
+    border: 1px solid var(--light-gray);
+    background: black;
     color: white;
+
 }
 
 
 .submit:hover {
     background: none;
-    color: var(--light-blue);
-    border: 1px solid var(--light-blue);
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
 
 }
 
@@ -331,24 +339,6 @@ img.triangle-svg {
 
 
 /*search form*/
-#search-form {
-    display: flex;
-    min-width: fit-content;
-    align-items: center;
-    gap: 16px;
-    flex-wrap: nowrap;
-    width: 100%;
-}
-
-
-input#query {
-    border: 1px solid black;
-}
-
-.category {
-    border: 1px solid red;
-}
-
 
 #add-client {
     display: flex;
@@ -360,7 +350,7 @@ input#query {
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    padding-bottom: 20px;
+    padding-bottom: 15px;
     position: fixed;
     left: 80vw;
     bottom: 10vh;
@@ -368,6 +358,11 @@ input#query {
     margin-bottom: 16px;
 }
 
+#add-client:hover {
+    background: none;
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
+}
 
 footer {
     display: flex;
@@ -401,11 +396,6 @@ section#edit-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-
-form#delete > input {
-    background: red;
 }
 
 

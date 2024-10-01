@@ -11,43 +11,44 @@
 }
 
 html, body {
+    position: fixed;
     display: flex;
     flex-direction: column;
-    /*height: 100%;*/
+    min-width: fit-content;
     width: 100%;
-    min-height: fit-content;
-    padding: 50px 0;
-
+    height: 100%;
+    overflow: scroll;
+    margin-right: 100vh;
+    padding-bottom: 150px;
 }
 
+
 @media screen and (max-width: 600px) {
+
     nav {
-        background: #ffffff;
         display: flex;
         justify-content: space-between;
-        padding: 8px 32px;
-        align-items: center;
+        font-size: 16px;
         border-bottom: 1px solid var(--light-gray);
         position: fixed;
-        left: 0;
         top: 0;
         width: 100%;
-        z-index: 1;
-        margin-bottom: 16px;
+        padding: 0 16px;
     }
+
 
     button.home.title {
         font-weight: 800;
-        font-size: 70px;
+        font-size: 32px;
         color: var(--accent-color);
         border: none;
         background: none;
     }
 
     .logout {
-        font-size: 32px;
+        font-size: 16px;
         color: black;
-        font-weight: 700;
+        font-weight: 600;
     }
 
     input {
@@ -76,6 +77,9 @@ html, body {
         gap: 16px;
     }
 
+    .column-title {
+        min-width: 300px;
+    }
 
     #registration-form, .clients-wrapper, #edit_form {
         display: flex;
@@ -141,7 +145,7 @@ html, body {
 
 
     .input-date {
-        font-size: 18px;
+        font-size: 16px;
         width: 245px;
         border: none;
         border-bottom: 1px solid var(--light-gray);
@@ -152,10 +156,9 @@ html, body {
 
 
     .title {
-        font-size: 48px;
+        font-size: 16px;
         color: black;
         font-weight: var(--thin);
-        padding-top: 16px;
         padding-left: 4px;
         text-align: center;
 
@@ -173,7 +176,7 @@ html, body {
         display: flex;
         gap: 16px;
         flex-direction: column;
-        min-width: 700px;
+        min-width: 40px;
         padding-bottom: 16px;
         border-bottom: 1px solid var(--light-gray);
     }
@@ -199,8 +202,8 @@ html, body {
     }
 
     img.triangle-svg {
-        height: 40px;
-        width: 40px;
+        height: 16px;
+        width: 16px;
     }
 
     .edit-button {
@@ -211,11 +214,14 @@ html, body {
     .client-name {
         min-width: 150px;
         white-space: nowrap;
+        font-size: 16px;
+        font-weight: bold;
     }
 
 
+
     .label {
-        font-size: 24px;
+        font-size: 16px;
     }
 
 
@@ -236,25 +242,22 @@ html, body {
         white-space: nowrap;
     }
 
-    .client-name {
-        font-size: 40px;
-        font-weight: bold;
-    }
+
 
     .renewal-date {
-        font-size: 32px;
+        font-size: 14px;
     }
 
     .all-details {
         display: flex;
         flex-direction: column;
-        min-width: 600px;
+        min-width: 250px;
     }
 
     .client-detail {
         padding: 4px 8px;
         border-radius: 8px;
-        font-size: 32px;
+        font-size: 14px;
     }
 
     .client-detail > span {
@@ -262,11 +265,11 @@ html, body {
     }
 
     .edit-button {
-        font-size: 40px;
-        padding: 4px 16px;
-        width: 100px;
+        font-size: 16px;
+        padding: 0 8px;
+        width: 56px;
         align-self: flex-end;
-        border-radius: 8px;
+        border-radius: 16px;
         border: 1px solid var(--accent-color);
         color: var(--accent-color);
 
@@ -278,7 +281,7 @@ html, body {
     }
 
     .client-amount {
-        font-size: 32px;
+        font-size: 16px;
     }
 
 
@@ -335,21 +338,22 @@ html, body {
 
 
     #add-client {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 100px;
+        /*display: flex;*/
+        /*align-items: center;*/
+        /*justify-content: center;*/
+        text-align: center;
+        font-size: 40px;
         color: white;
         background: var(--accent-color);
-        width: 100px;
-        height: 100px;
+        width: 48px;
+        height: 48px;
         border-radius: 50%;
-        padding-bottom: 20px;
         position: fixed;
         left: 80vw;
         bottom: 10vh;
         border: none;
         margin-bottom: 16px;
+        padding-bottom: 8px;
     }
 
 
@@ -360,7 +364,7 @@ html, body {
         left: 0vw;
         bottom: 0vh;
         width: 100%;
-        padding: 8px 56px;
+        padding: 0 16px;
         color: white;
         justify-self: flex-end;
         border-top: 1px solid var(--light-gray);

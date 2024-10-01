@@ -4,12 +4,16 @@
 
 {% block extra_css %}
 	<link rel="stylesheet" href="{% static 'clients/edit.css' %}">
+
 {% endblock %}
 
 {% block title %}Edit Client{% endblock %}
 
 {% block body %}
 
+<br>
+<br>
+<br>
 <section id="edit-wrapper">
 <h1 class="title">Edit Client</h1>
 <br>
@@ -60,7 +64,7 @@
 </form>
 <form id="delete" action="{% url 'clients:delete' client.id %}" method="POST">
 	 {% csrf_token %}
-	<input class="submit" type="submit" value="Delete">
+	<input class="delete" type="submit" value="Delete">
 </form>
 </section>
 {% endblock %}

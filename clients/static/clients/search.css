@@ -1,7 +1,7 @@
 
 :root {
-    --mobile-medium: 32px;
-    --mobile-small: 24px;
+    --mobile-medium: 16px;
+    --mobile-small: 14px;
 }
 
 
@@ -9,6 +9,7 @@
     font-size: var(--mobile-medium);
     border: none;
     background: none;
+
 
 }
 
@@ -31,15 +32,81 @@ option {
 }
 
 input#query {
-    font-size: 32px;
-    padding: 8px;
+    font-size: 16px;
+    padding: 4px 8px;
     border-radius: 8px;
     /*border: none;*/
 }
 
 button#search-button {
-    font-size: var(--mobile-medium);
-    padding: 8px;
-    border-radius: 10%;
+    font-size: 16px;
+    padding: 4px 16px;
+    border-radius: 16px;
     background: none;
+}
+
+
+select#id_category {
+    font-size: 16px;
+    padding: 4px 8px;
+}
+
+
+#search-form {
+    display: flex;
+    min-width: fit-content;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: nowrap;
+    width: 100%;
+}
+
+
+input#query {
+    border: 1px solid black;
+
+}
+
+.category {
+    display: flex;
+    /*border: 1px solid red;*/
+    align-items: center;
+
+}
+
+@media screen and (max-width: 600px) {
+
+    form#search-form {
+        display: flex;
+        flex-direction: column;
+        width: 400px;
+    }
+
+    .search-by.sf-element {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        align-items: center;
+
+    }
+    select#id_category {
+        border-radius: 16px;
+        padding: 4px;
+        width: 200px;
+    }
+
+    input#query {
+        border-radius: 16px;
+        padding: 4px 16px;
+        width: 250px;
+
+    }
+
+    option {
+        width: 100px;
+    }
+
+    .title {
+        font-size: 24px;
+    }
 }
