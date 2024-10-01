@@ -2,8 +2,8 @@
 {% extends 'eccentric/home.html' %}
 {% block home %}
 
-<form method="post" action="{% url 'eccentric:login' %}">
-	<h2>Login</h2>
+<form id="login-form" method="post" action="{% url 'eccentric:login' %}">
+	<div class="title">Login</div>
     {% csrf_token %}
 	<div>
 		<label>
@@ -20,7 +20,7 @@
 	</div>
 	<br>
     <div>
-		<button class="form-submit" type="submit">Login</button>
+		<button id="login-button" class="form-submit" type="submit">Login</button>
 	</div>
 </form>
 {% endblock %}

@@ -1,34 +1,33 @@
 
 {% extends 'eccentric/home.html' %}
+
 {% block home %}
 
-<form method="post" action="{% url 'eccentric:register' %}">
-	<h2>Register</h2>
+<form id="sign-up-form" method="post" action="{% url 'eccentric:register' %}">
+	<div class="title">Register</div>
     {% csrf_token %}
     <div>
 		<label> User Name<br>
 			{{ form.username }}
 		</label>
 	</div>
-	<br>
 	<div>
 		<label> Email<br>
 			{{ form.email }}
 		</label>
 	</div>
-	<br>
 	<div>
 		<label> Password<br>
 			{{ form.password1 }}
 		</label>
 	</div>
-	<br>
 	<div>
 		<label> Confirm Password <br>
 			{{ form.password2 }}
 		</label>
 	</div>
 	<br>
-    <button type="submit">Register</button>
+    <button id="signup" type="submit">Register</button>
 </form>
 {% endblock %}
+
