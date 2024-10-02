@@ -52,7 +52,7 @@ select#id_category {
 }
 
 
-#search-form {
+form#search-form {
     display: flex;
     min-width: fit-content;
     align-items: center;
@@ -74,12 +74,22 @@ input#query {
 
 }
 
+.search-by {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+
+}
+
+
+
 @media screen and (max-width: 600px) {
 
     form#search-form {
         display: flex;
         flex-direction: column;
-        width: 400px;
+        align-items: center;
+        width: 350px;
     }
 
     .search-by.sf-element {
