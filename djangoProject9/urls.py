@@ -16,11 +16,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+import pwa.urls
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('eccentric/clients/', include('clients.urls')),
     path('eccentric/', include('eccentric.urls')),
+    path('', include('pwa.urls')),
     # path('accounts/', include('django.contrib.auth.urls')),
 ]
 
